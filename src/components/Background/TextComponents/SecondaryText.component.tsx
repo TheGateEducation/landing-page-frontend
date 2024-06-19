@@ -6,7 +6,7 @@ interface SecondaryTextProps {
 
 const SecondaryText: React.FC<SecondaryTextProps> = ({ text }) => {
     return (
-        <div className="text-2xl font-bold text-justify text-white">
+        <div className="text-2xl font-bold text-white ">
             <h1>{text}</h1>
         </div>
     );
