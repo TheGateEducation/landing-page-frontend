@@ -24,6 +24,10 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         customOrange: '#FAA533',
         customOrangeHover: '#D18A28',
+        customPurple: '#662D91',
+        whiteNotWhite: '#FCFBF8',
+        whiteNotWhiteHover: '#F0EFEA',
+        textGray: '#535353',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

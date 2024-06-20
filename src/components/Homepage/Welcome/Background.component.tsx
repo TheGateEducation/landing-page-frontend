@@ -1,8 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+
 
 interface BackgroundProps {
-    src: string;
+    src: string | StaticImageData;
     width: number;
     height: number;
 }
