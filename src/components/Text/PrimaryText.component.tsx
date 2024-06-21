@@ -17,7 +17,7 @@ const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color, textarea, childr
                 : 'text-justify';
 
     return (
-        <div className={`text-6xl font-bold ${colorClass} ${textAreaClass} my-20`}>
+        <div className={`text-6xl font-bold ${colorClass} ${textAreaClass} `}>
             {text && <h1>{text}</h1>}
             {children} {/* Render children */}
         </div>

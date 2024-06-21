@@ -16,7 +16,7 @@ const SecondaryText: React.FC<SecondaryTextProps> = ({ text, color, textarea }) 
                 : 'text-justify';
 
     return (
-        <div className={`text-5xl font-bold ${textAreaClass} ${colorClass} my-0`}>
+        <div className={`text-2xl font-bold ${textAreaClass} ${colorClass} my-0`}>
             <h1>{text}</h1>
         </div>
     );
