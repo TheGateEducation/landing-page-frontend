@@ -1,13 +1,12 @@
 import React from 'react';
 
-interface PrimaryTextProps {
-    text?: string;
+interface UnderlinedTextProps {
+    text: string;
     color: 'customOrange' | 'whiteNotWhite' | 'customPurple';
     textarea: 'left' | 'right' | 'center' | 'justify';
-    children?: React.ReactNode; // Accept children as a prop
 }
 
-const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color, textarea, children }) => {
+const UnderlinedText: React.FC<UnderlinedTextProps> = ({ text, color, textarea }) => {
     const colorClass = color === 'customOrange' ? 'text-customOrange'
         : color === 'whiteNotWhite' ? 'text-whiteNotWhite'
             : 'text-customPurple';
@@ -17,11 +16,10 @@ const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color, textarea, childr
                 : 'text-justify';
 
     return (
-        <div className={`text-6xl font-bold ${colorClass} ${textAreaClass} my-20`}>
-            {text && <h1>{text}</h1>}
-            {children} {/* Render children */}
+        <div className={`text-2xl font-bold underline ${textAreaClass} ${colorClass} my-0`}>
+            <h1>{text}</h1>
         </div>
     );
 };
 
-export default PrimaryText;
+export default UnderlinedText;

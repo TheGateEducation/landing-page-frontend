@@ -25,6 +25,7 @@ module.exports = {
         customOrange: '#FAA533',
         customOrangeHover: '#D18A28',
         customPurple: '#662D91',
+        customMint: '#699984',
         whiteNotWhite: '#FCFBF8',
         whiteNotWhiteHover: '#F0EFEA',
         textGray: '#535353',
@@ -75,6 +76,10 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      margin: {
+        "30": "7.5rem",
+        "40": "10rem"
       },
     },
   },
