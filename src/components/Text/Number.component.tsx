@@ -1,34 +1,36 @@
-import AnimatedCounter from '@src/components/Text/AnimatedCounter.component';
+import React from 'react';
 import PrimaryText from '@src/components/Text/PrimaryText.component';
-import SecondaryText from './SecondaryText.component';
+import SecondaryText from '@src/components/Text/SecondaryText.component';
+import AnimatedCounter from '@src/components/Text/AnimatedCounter.component';
 
-export const Number: React.FC = () => {
-    return (
-        <div className='relative w-full h-auto flex items-center justify-center p-1 bg-customMint '>
-            <main className="flex flex-row space-x-40 pt-20 pb-20">
-                <div className='flex   border-4 border-indigo-500/100'>
-                    <PrimaryText color='whiteNotWhite' textarea='center' text={"+"}>
-                        <AnimatedCounter from={0} to={10} />
-                        <SecondaryText color='whiteNotWhite' textarea='left' text={"Países"} />
-                    </PrimaryText>
-                </div>
+interface StatsBlockProps {
+    primaryColor: 'customOrange' | 'whiteNotWhite' | 'customPurple';
+    primaryTextAlign: 'left' | 'right' | 'center' | 'justify';
+    primaryText: string;
 
-                <div className='flex flex  border-4 border-indigo-500/100'>
-                    <PrimaryText color='whiteNotWhite' textarea='center' text={"+"}>
-                        <AnimatedCounter from={0} to={100} />
-                        <SecondaryText color='whiteNotWhite' textarea='left' text={"Instituciones educacionales"} />
-                    </PrimaryText>
-                </div>
-                <div className='flex flex  border-4 border-indigo-500/100'>
-                    <PrimaryText color='whiteNotWhite' textarea='center' text={"+"}>
-                        <AnimatedCounter from={0} to={300} />
-                        <SecondaryText color='whiteNotWhite' textarea='left' text={"Programas"} />
-                    </PrimaryText>
-                </div>
-            </main >
-        </div>
-
-    )
+    counterTo: number;
+    secondaryColor: 'customOrange' | 'whiteNotWhite' | 'customPurple';
+    secondaryTextAlign: 'left' | 'right' | 'center' | 'justify';
+    secondaryText: string;
 }
 
-export default Number;
+const StatsBlock: React.FC<StatsBlockProps> = ({
+    primaryColor,
+    primaryTextAlign,
+    primaryText,
+    counterTo,
+    secondaryColor,
+    secondaryTextAlign,
+    secondaryText
+}) => {
+    return (
+        <div className='flex flex-row items-center justify-center space-x-4 h-20 w-20'>
+            <PrimaryText color={primaryColor} textarea={primaryTextAlign} text={primaryText}>
+                <AnimatedCounter to={counterTo} />
+                <SecondaryText color={secondaryColor} textarea={secondaryTextAlign} text={secondaryText} />
+            </PrimaryText>
+        </div>
+    );
+};
+
+export default StatsBlock;

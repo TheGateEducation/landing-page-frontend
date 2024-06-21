@@ -12,6 +12,7 @@ export default function Home() {
             <Welcome />
             <AboutUs />
             <Numbers />
+            
 
         </main>
     );

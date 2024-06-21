@@ -16,7 +16,7 @@ const UnderlinedText: React.FC<UnderlinedTextProps> = ({ text, color, textarea }
                 : 'text-justify';
 
     return (
-        <div className={`text-2xl font-bold underline ${textAreaClass} ${colorClass} my-0`}>
+        <div className={`text-xl font-bold underline ${textAreaClass} ${colorClass} my-0`}>
             <h1>{text}</h1>
         </div>
     );

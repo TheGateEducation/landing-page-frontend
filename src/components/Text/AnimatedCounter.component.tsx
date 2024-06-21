@@ -4,19 +4,19 @@ import { KeyframeOptions, useIsomorphicLayoutEffect, animate } from 'framer-moti
 import { useRef } from 'react';
 
 type AnimatedCOunterProps = {
-    from: number;
+    
     to: number,
     animationOption?: KeyframeOptions
 }
 
-const AnimatedCounter = ({ from, to, animationOption }: AnimatedCOunterProps) => {
+const AnimatedCounter = ({ to, animationOption }: AnimatedCOunterProps) => {
     const ref = useRef<HTMLSpanElement>(null);
 
     useIsomorphicLayoutEffect(() => {
         const element = ref.current;
         if (!element) return;
 
-        element.textContent = from.toString();
+       const from = 0;
         
         const controls = animate(from, to, {
             duration: 5,
@@ -29,7 +29,7 @@ const AnimatedCounter = ({ from, to, animationOption }: AnimatedCOunterProps) =>
         return() => {
             controls.stop();
         };
-    }, [from, to, animationOption]);
+    }, [0, to, animationOption]);
 
     return <span ref={ref} />;
 };
