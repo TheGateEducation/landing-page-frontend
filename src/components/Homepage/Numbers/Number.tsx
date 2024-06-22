@@ -1,20 +1,29 @@
 import React from "react";
-import Number from "@src/components/Text/Number.component";
+import Stadistics, {StadisticsProps} from "@src/components/Text/Stadistics.component";;
+
+{/* Parametros por default, ya que se repetian para todos los componentes  */}
+const commonNumberProps: Pick<StadisticsProps, 'secondaryColor' | 'secondaryTextAlign'> = {
+    secondaryColor: 'whiteNotWhite',
+    secondaryTextAlign: 'left'
+};
 
 export const Numbers: React.FC = () => {
     return (
-        <div className=' flex w-full h-auto justify-center p-36 space-x-60 bg-customMint '>
-            <Number primaryColor="whiteNotWhite" primaryTextAlign="center" primaryText="+"
+        <div className='flex w-full h-auto justify-center p-8 sm:p-16 md:p-24 lg:p-36 space-x-16 sm:space-x-16 md:space-x-96 lg:space-x-32 xl:space-x-100 bg-customMint'>
+            <Stadistics
                 counterTo={10}
-                secondaryColor="whiteNotWhite" secondaryText="Países" secondaryTextAlign="center" />
-
-            <Number primaryColor="whiteNotWhite" primaryTextAlign="center" primaryText="+"
+                secondaryText="Países"
+                {...commonNumberProps}
+            />
+            <Stadistics
                 counterTo={100}
-                secondaryColor="whiteNotWhite" secondaryText="Instituciones educacionales" secondaryTextAlign="center" />
-
-            <Number primaryColor="whiteNotWhite" primaryTextAlign="center" primaryText="+"
+                secondaryText="Instituciones educacionales"
+                {...commonNumberProps}
+            />
+            <Stadistics
                 counterTo={300}
-                secondaryColor="whiteNotWhite" secondaryText="Programas" secondaryTextAlign="center" />
+                secondaryText="Programas"
+                {...commonNumberProps} />
         </div>
     );
 };
