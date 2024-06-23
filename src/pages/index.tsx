@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Navbar } from "@src/components/Navbar/Navbar";
 import { Welcome } from "@src/components/Homepage/Welcome/Welcome";
@@ -14,7 +13,7 @@ export default function Home() {
             <AboutUs />
             <Numbers />
             <Safeway />
-            
+
 
         </main>
     );
