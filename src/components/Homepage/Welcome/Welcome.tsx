@@ -14,7 +14,7 @@ export const Welcome: React.FC = () => {
           <SecondaryText text="BIENVENIDOS" color="whiteNotWhite" textarea="center" />
           <PrimaryText text="HAZ REALIDAD TU SUEÑO DE EDUCACIÓN INTERNACIONAL" color="whiteNotWhite" textarea="center" />
           <div className="space-x-8 mt-0">
-            <a href="/">
+            <a href="#aboutus">
               <Button text="Sobre nosotros" />
             </a>
             <a href="/">

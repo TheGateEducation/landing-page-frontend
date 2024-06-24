@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useRouter } from 'next/router'
+
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -27,7 +29,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
     {
-        href: "/#AboutUs",
+        href: "#aboutus",
         label: "Sobre nosotros",
     },
     {
