@@ -4,7 +4,6 @@ import { KeyframeOptions, useIsomorphicLayoutEffect, animate } from 'framer-moti
 import { useRef } from 'react';
 
 type AnimatedCOunterProps = {
-    
     to: number,
     animationOption?: KeyframeOptions
 }

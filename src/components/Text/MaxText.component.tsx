@@ -8,7 +8,7 @@ interface MaxTextProps {
     
 }
 
-const MaxText: React.FC<MaxTextProps> = ({ text, color, textarea, children}) => {
+const MaxText: React.FC<MaxTextProps> = ({ text, color = "whiteNotWhite", textarea= "center", children}) => {
     const colorClass = color === 'customOrange' ? 'text-customOrange'
         : color === 'whiteNotWhite' ? 'text-whiteNotWhite'
             : 'text-customPurple';
@@ -18,7 +18,7 @@ const MaxText: React.FC<MaxTextProps> = ({ text, color, textarea, children}) => 
                 : 'text-justify';
 
     return (
-        <div className={`text-9xl font-bold ${colorClass} ${textAreaClass} my-20`}>
+        <div className={`text-9xl font-bold ${colorClass} ${textAreaClass} my-10`}>
             <h1>{text}</h1>
             {children}
         </div>
