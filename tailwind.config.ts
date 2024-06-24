@@ -85,6 +85,9 @@ module.exports = {
         "30": "7.5rem",
         "40": "10rem"
       },
+      fontFamily: {
+        Montserrat: ["Montserrat", "sans-serif"],
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
