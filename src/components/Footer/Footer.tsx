@@ -1,3 +1,6 @@
+import Link from "next/link";
+import React from "react";
+
 export const Footer = () => {
     return (
         <footer id="footer">
@@ -5,54 +8,54 @@ export const Footer = () => {
 
             <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
                 <div className="col-span-full xl:col-span-2">
-                    <a
+                    <Link
                         rel="noreferrer noopener"
                         href="/"
                         className="font-bold text-xl flex"
                     >
                         The Gate Education
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="flex flex-col gap-2">
                     <h3 className="font-bold text-lg">Follow US</h3>
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="https://www.instagram.com/the_gate_education/"
                             className="opacity-60 hover:opacity-100"
                         >
                             Instagram
-                        </a>
+                        </Link>
                     </div>
 
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="https://x.com/TheGateEdux"
                             className="opacity-60 hover:opacity-100"
                         >
                             X
-                        </a>
+                        </Link>
                     </div>
 
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Facebook
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="https://www.linkedin.com/company/thegate-education/"
                             className="opacity-60 hover:opacity-100"
                         >
                             Linkedin
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -61,51 +64,51 @@ export const Footer = () => {
                 <div className="flex flex-col gap-2">
                     <h3 className="font-bold text-lg">About</h3>
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Features
-                        </a>
+                        </Link>
                     </div>
 
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Programas
-                        </a>
+                        </Link>
                     </div>
 
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Servicios
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Noticias
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a
+                        <Link
                             rel="noreferrer noopener"
                             href="#"
                             className="opacity-60 hover:opacity-100"
                         >
                             Contacto
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -115,14 +118,14 @@ export const Footer = () => {
             <section className="container pb-14 text-center">
                 <h3>
                     &copy; 2024 Landing page made for {" "}
-                    <a
+                    <Link
                         rel="noreferrer noopener"
                         target="_blank"
                         href="/"
                         className="text-primary transition-all border-primary hover:border-b-2"
                     >
                         The Gate Education
-                    </a>
+                    </Link>
                 </h3>
             </section>
         </footer>
