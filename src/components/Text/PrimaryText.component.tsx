@@ -2,12 +2,12 @@ import React from 'react';
 
 interface PrimaryTextProps {
     text?: string;
-    color: 'customOrange' | 'whiteNotWhite' | 'customPurple';
-    textarea: 'left' | 'right' | 'center' | 'justify';
+    color?: 'customOrange' | 'whiteNotWhite' | 'customPurple';
+    textarea?: 'left' | 'right' | 'center' | 'justify';
     children?: React.ReactNode; // Accept children as a prop
 }
 
-const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color, textarea, children }) => {
+const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color = "whiteNotWhite", textarea= "center", children }) => {
     const colorClass = color === 'customOrange' ? 'text-customOrange'
         : color === 'whiteNotWhite' ? 'text-whiteNotWhite'
             : 'text-customPurple';
@@ -17,7 +17,7 @@ const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color, textarea, childr
                 : 'text-justify';
 
     return (
-        <div className={`text-6xl font-bold ${colorClass} ${textAreaClass} my-20`}>
+        <div className={`text-4xl sm:text-6xl font-bold ${colorClass} ${textAreaClass} mt-4 sm:mt-0`}>
             <h1>{text}</h1>
             {children}
         </div>

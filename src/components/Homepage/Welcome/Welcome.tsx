@@ -8,13 +8,13 @@ import beach from '@src//images/beach.png';
 
 export const Welcome: React.FC = () => {
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full min-h-screen">
             <Background src={beach} width={1800} height={0} />
-            <div className="flex flex-col items-center justify-center w-full h-full text-center relative">
-                <div className="max-w-screen-lg space-y-10">
-                    <SecondaryText text="BIENVENIDOS" color="whiteNotWhite" textarea="center" />
-                    <PrimaryText text="HAZ REALIDAD TU SUEÑO DE EDUCACIÓN INTERNACIONAL" color="whiteNotWhite" textarea="center" />
-                    <div className="space-x-8 mt-0">
+            <div className="absolute inset-0 flex items-center justify-center ">
+                <div className="max-w-screen-lg px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 text-center border-4 border-indigo-500/100 ">
+                    <SecondaryText text="BIENVENIDOS" />
+                    <PrimaryText text="HAZ REALIDAD TU SUEÑO DE EDUCACIÓN INTERNACIONAL" />
+                    <div className="flex justify-center mt-8 space-x-4 sm:space-x-8">
                         <Link href="#aboutus">
                             <Button text="Sobre nosotros" />
                         </Link>
