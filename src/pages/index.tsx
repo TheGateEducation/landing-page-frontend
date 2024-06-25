@@ -14,7 +14,6 @@ export default function Home() {
             <AboutUs />
             <Numbers />
             <Safeway />
-            <Footer />
 
 
         </main>
