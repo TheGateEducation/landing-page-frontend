@@ -18,13 +18,13 @@ const Stadistics: React.FC<StadisticsProps> = ({
     secondaryText
 }) => {
     return (
-        <div className='flex flex-row items-center justify-center space-x-4 h-20 w-20'>
+        <>
             <PrimaryText color={secondaryColor} textarea={secondaryTextAlign} text={"+"} />
             <MaxText>
                 <AnimatedCounter to={counterTo} />
             </MaxText>
             <SecondaryText color={secondaryColor} textarea={secondaryTextAlign} text={secondaryText} />
-        </div>
+        </>
     );
 };
 

@@ -16,7 +16,7 @@ const SecondaryText: React.FC<SecondaryTextProps> = ({ text, color = "whiteNotWh
                 : 'text-justify';
 
     return (
-        <div className={`text-2xl sm:text-3xl font-semibold ${textAreaClass} ${colorClass} mt-0 sm:mt-2`}>
+        <div className={`text-2xl sm:text-3xl font-semibold ${textAreaClass} ${colorClass} pt-5 `}>
             <h1>{text}</h1>
         </div>
     );

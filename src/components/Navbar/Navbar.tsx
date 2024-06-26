@@ -29,7 +29,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
     {
-        href: "#aboutus",
+        href: "/aboutus",
         label: "Sobre nosotros",
     },
     {
@@ -45,7 +45,7 @@ const routeList: RouteProps[] = [
         label: "Noticias",
     },
     {
-        href: "/contact",
+        href: "/contactus",
         label: "Contacto",
     }
 ];
@@ -53,7 +53,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
-        <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-300 dark:bg-background">
+        <header className="sticky fixed border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-300 dark:bg-background">
             <NavigationMenu className="mx-auto">
                 <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between ">
                     <NavigationMenuItem className="font-bold flex">

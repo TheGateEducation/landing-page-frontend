@@ -17,7 +17,7 @@ const PrimaryText: React.FC<PrimaryTextProps> = ({ text, color = "whiteNotWhite"
                 : 'text-justify';
 
     return (
-        <div className={`text-4xl sm:text-6xl font-bold ${colorClass} ${textAreaClass} mt-4 sm:mt-0`}>
+        <div className={`text-4xl sm:text-6xl font-bold ${colorClass} ${textAreaClass} `}>
             <h1>{text}</h1>
             {children}
         </div>
