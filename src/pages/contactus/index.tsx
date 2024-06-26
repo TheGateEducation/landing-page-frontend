@@ -5,7 +5,7 @@ import contactus from '@src/images/contactus.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
 
-export default function AboutUs() {
+export default function ContactUs() {
     return (
         <main>
             <div className="relative ">

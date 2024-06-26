@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import { Navbar } from "@src/components/Navbar/Navbar";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "@src/components/Buttons/Button.component";
 import SecondaryText from "@src/components/Text/SecondaryText.component";
 import PrimaryText from "@src/components/Text/PrimaryText.component";
@@ -19,10 +19,10 @@ export default function AboutUs() {
             <div className="relative ">
                 <Navbar />
                 <div className="relative h-screen 6 w-full ">
-                    <div
-                        className="absolute inset-0 z-1 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${aboutus.src})` }} // Using the src property of the imported image
-                    ></div>
+                    <Image 
+                        src={aboutus.src}
+                        layout="fill"
+                        objectFit="cover" />
                 </div>
                 <Footer />
 
