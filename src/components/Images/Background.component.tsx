@@ -2,7 +2,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 interface BackgroundProps {
   imageUrl: string | StaticImageData;
-  children: number;
+  children:  React.ReactNode;
 }
 
 const Background: React.FC<BackgroundProps> = ({ imageUrl, children }) => {
