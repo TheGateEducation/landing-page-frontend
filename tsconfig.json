@@ -12,7 +12,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["node", "react", "react-dom", "@types/react-countup"],
+    "types": ["node", "react", "react-dom", "next"],
     "paths": {
       "@src/*": ["./src/*"]
     }
