@@ -1,26 +1,25 @@
 import { useState } from "react";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+import { Menu } from "lucide-react";
+
 import {
     NavigationMenu,
     NavigationMenuItem,
     NavigationMenuList,
-} from "@src/components/ui/navigation-menu";
+} from "@src/components/Navbar/components/navigation-menu";
 import {
     Sheet,
     SheetContent,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@src/components/ui/sheet";
+} from "@src/components/Navbar/components/sheet";
 
-import NavbarIcon from "@src/components/Icons/NavbarIcon.component";
-
-import { Menu } from "lucide-react";
-import { buttonVariants } from "@src/components/ui/button";
-
-import { ModeToggle } from "@src/components/Navbar/mode-toggle";
-import  Logo from "@src/components/Navbar/Logo";
+import NavbarIcon from "@src/components/Navbar/icons/NavbarIcon.component";
+import { buttonVariants } from "@src/components/Navbar/components/button";
+import { ModeToggle } from "@src/components/Navbar/components/mode-toggle";
+import Logo from "@src/components/Navbar/components/Logo";
 
 interface RouteProps {
     href: string;
@@ -62,7 +61,7 @@ export const Navbar = () => {
                             href="/"
                         >
                             <Logo />
-                
+
                         </Link>
                     </NavigationMenuItem>
 

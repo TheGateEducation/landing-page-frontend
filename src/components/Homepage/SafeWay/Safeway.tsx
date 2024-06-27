@@ -1,4 +1,4 @@
-import SecondaryText from "@src/components/Text/SecondaryText.component";
+// import SecondaryText from "@src/components/Text/SecondaryText.component";
 import React from "react";
 
 
@@ -7,7 +7,7 @@ export const Safeway: React.FC = () => {
     <div className="relative w-full h-128">
       <div className="flex flex-col items-center justify-center w-full h-full text-center relative ">
         <div className="max-w-screen-lg space-y-10  ">
-          <SecondaryText text="La forma más segura y fácil de estudiar en el extranjero" color="customOrange" textarea="center" />
+          {/* <SecondaryText text="La forma más segura y fácil de estudiar en el extranjero" color="customOrange" textarea="center" /> */}
           <p >¡Expande tus conocimientos, habilidades y cultura en el extranjero y obtén una experiencia de vida inolvidable!</p>
         </div>
       </div>
