@@ -31,19 +31,19 @@ const data = {
   },
   options: {
     src: options,
-    alt: "contact us",
+    alt: "opciones",
     h2: "02.",
     p: "Encuentra todas las opciones para tus estudios"
   },
   flags: {
     src: flags,
-    alt: "contact us",
+    alt: "programa",
     h2: "03.",
     p: "Selecciona tu programa y aplica"
   },
   fly: {
     src: fly,
-    alt: "contact us",
+    alt: "conocer",
     h2: "04.",
     p: "¡Viaja!",
   }
