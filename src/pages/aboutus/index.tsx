@@ -23,4 +23,3 @@ export default function AboutUs() {
 
     );
 }
-{/* grid grid-cols-1 lg:grid-cols-2  */ }

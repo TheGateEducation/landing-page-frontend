@@ -25,4 +25,3 @@ export default function Programs() {
 
     );
 }
-{/* grid grid-cols-1 lg:grid-cols-2  */ }

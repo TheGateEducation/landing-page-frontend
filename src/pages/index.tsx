@@ -6,6 +6,8 @@ import { Footer } from '@src/components/Footer/Footer';
 import Hero from '@src/components/Homepage/Hero/Hero';
 import AboutUs from '@src/components/Homepage/AboutUs/AboutUs';
 import Stadistics from '@src/components/Homepage/Stadistics/Stadistics';
+import HeretoHelp from '@src/components/Homepage/AboutUs/HereToHelp';
+import MeetTeam from '@src/components/Homepage/MeetTeam/MeetTeam';
 import { Safeway } from '@src/components/Homepage/SafeWay/Safeway';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -35,6 +37,8 @@ const Home = () => {
                 <AboutUs />
                 <Stadistics />
                 <Safeway />
+                <HeretoHelp />
+                <MeetTeam />
                 <Footer />
             </main>
         </>

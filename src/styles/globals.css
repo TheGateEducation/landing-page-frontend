@@ -71,6 +71,10 @@ html {
     }
 }
 
+#image-container > * {
+    padding: 1%; /* Equivalente a p-5 en Tailwind CSS */
+  }
+  
 
 @layer base {
     :root {
