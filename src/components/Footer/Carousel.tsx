@@ -69,9 +69,9 @@ export const Carousel = () => {
                                 })"
                                 className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                                 <ul x-ref="logos" className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll ">
-                                    {Logos.map(([name, logos]) => (
+                                    {Logos.map(([name, logo]) => (
                                         <li key={name}>
-                                            <img src={logos} alt={name} />
+                                            <Image src={logo} alt={name} width={100} height={100} />
                                         </li>
                                     ))}
                                 </ul>
