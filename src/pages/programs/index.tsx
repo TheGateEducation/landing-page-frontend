@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Programs() {
     return (
+        <>
         <main>
             <div className="relative ">
                 <Navbar />
@@ -19,9 +20,9 @@ export default function Programs() {
                     ></div>
                 </div>
                 <Footer />
-
             </div>
         </main>
+        </>
 
     );
 }

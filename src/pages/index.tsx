@@ -8,6 +8,8 @@ import AboutUs from '@src/components/Homepage/AboutUs/AboutUs';
 import Stadistics from '@src/components/Homepage/Stadistics/Stadistics';
 import HeretoHelp from '@src/components/Homepage/AboutUs/HereToHelp';
 import MeetTeam from '@src/components/Homepage/MeetTeam/MeetTeam';
+import Questions from '@src/components/Homepage/Stadistics/Questions';
+import { Carousel } from '@src/components/Footer/Carousel';
 import { Safeway } from '@src/components/Homepage/SafeWay/Safeway';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -39,7 +41,10 @@ const Home = () => {
                 <Safeway />
                 <HeretoHelp />
                 <MeetTeam />
+                <Questions />
+                <Carousel />
                 <Footer />
+                
             </main>
         </>
     );

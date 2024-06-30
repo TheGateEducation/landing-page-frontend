@@ -7,19 +7,19 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function AboutUs() {
     return (
-        <main>
-            <div className="relative ">
-                <Navbar />
-                <div className="relative h-screen 6 w-full ">
-                    <Image
-                        src={aboutus.src}
-                        layout="fill"
-                        objectFit="cover" />
+        <>
+            <main>
+                <div className="relative ">
+                    <Navbar />
+                    <div className="relative h-screen 6 w-full ">
+                        <Image
+                            src={aboutus.src}
+                            layout="fill"
+                            objectFit="cover" />
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-
-            </div>
-        </main>
-
+            </main>
+        </>
     );
 }

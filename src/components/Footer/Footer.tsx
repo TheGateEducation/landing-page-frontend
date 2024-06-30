@@ -5,7 +5,6 @@ export const Footer = () => {
     return (
         <footer id="footer" className="bg-gray-100">
             <hr className="w-11/12 mx-auto" />
-
             <section className="container mx-auto py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 px-4">
                 <div className="col-span-full xl:col-span-2">
                     <Link
@@ -16,7 +15,6 @@ export const Footer = () => {
                         The Gate Education
                     </Link>
                 </div>
-
                 <div className="flex flex-col gap-2">
                     <h3 className="font-bold text-lg">Follow Us</h3>
                     <div>
@@ -56,7 +54,6 @@ export const Footer = () => {
                         </Link>
                     </div>
                 </div>
-
                 <div className="flex flex-col gap-2">
                     <h3 className="font-bold text-lg">About</h3>
                     <div>
@@ -106,10 +103,9 @@ export const Footer = () => {
                     </div>
                 </div>
             </section>
-
             <section className="container mx-auto pb-14 text-center px-4">
                 <h3>
-                    &copy; 2024 Landing page made for {" "}
+                    &copy; 2024 Copyright {" "}
                     <Link
                         rel="noreferrer noopener"
                         target="_blank"
