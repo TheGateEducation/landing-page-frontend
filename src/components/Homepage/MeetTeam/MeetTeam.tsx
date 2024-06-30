@@ -1,53 +1,53 @@
 import React from "react";
-import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@src/components/Homepage/MeetTeam/Card";
-import { buttonVariants } from "@src/components/Homepage/MeetTeam/ButtonVariants"; 
+import { buttonVariants } from "@src/components/Homepage/MeetTeam/ButtonVariants";
 import { Linkedin } from "lucide-react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/legacy/image";
 import paulina from "@src/images/paulina.jpeg";
 import alejandra from "@src/images/alejandra.jpeg";
-interface SocialNetworkProps{
+import { StaticImageData } from "next/legacy/image";
+interface SocialNetworkProps {
   name: string,
   url: string,
 }
 interface DataProps {
   name: string,
   position: string,
-  imageUrl: string;
+  imageUrl: StaticImageData;
   socialNetwork: SocialNetworkProps[];
 }
 
-const data:DataProps[] = [
+const data: DataProps[] = [
   {
-    name:"Paulina Valdés Rochín",
-    position:"CEO",
-    imageUrl: "@src/images/paulina.jpeg",
-    socialNetwork:[
+    name: "Paulina Valdés Rochín",
+    position: "CEO",
+    imageUrl: paulina,
+    socialNetwork: [
       {
-        name:"Linkedin",
-        url:"https://www.linkedin.com/in/paulina-vald%C3%A9s-roch%C3%ADn-272b294/"
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/paulina-vald%C3%A9s-roch%C3%ADn-272b294/"
       }
     ]
   },
   {
-    name:"Alejandra Hernández García",
-    position:"Student Counselor",
-    imageUrl: "@src/images/alejandra.jpeg",
-    socialNetwork:[
+    name: "Alejandra Hernández García",
+    position: "Student Counselor",
+    imageUrl: alejandra,
+    socialNetwork: [
       {
-        name:"Linkedin",
-        url:"https://www.linkedin.com/in/alejandra-hernandezgarcia/"
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/alejandra-hernandezgarcia/"
       }
     ]
   },
   {
-    name:"Gonzalo Perez Piaggio",
-    position:"Student Counselor",
-    imageUrl: "@src/images/alejandra.jpeg",
-    socialNetwork:[
+    name: "Gonzalo Perez Piaggio",
+    position: "Student Counselor",
+    imageUrl: alejandra,
+    socialNetwork: [
       {
-        name:"Linkedin",
-        url:"https://www.linkedin.com/in/gonzalo-perez-piaggio-b023591/"
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/gonzalo-perez-piaggio-b023591/"
       }
     ]
 
@@ -61,7 +61,8 @@ const MeetTeam = () => {
     switch (iconName) {
       case "Linkedin":
         return <Linkedin size="20" />;
-    }};
+    }
+  };
 
   return (
     <div className="relative w-full h-auto pb-10">
@@ -70,46 +71,47 @@ const MeetTeam = () => {
           <h1 className=" text-2xl md:text-3xl lg:text-4xl font-bold text-customOrange">Conoce el equipo</h1>
         </div>
         <div className="grid md:grid-cols-3 gap-8 gap-y-10">
-        {data.map(
-          ({ imageUrl, name, position, socialNetwork }: DataProps) => (
-            <Card
-              key={name}
-              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
-            >
-              <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
-                  className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-                />
-                <CardTitle className="text-center">{name}</CardTitle>
-                <CardDescription className="text-primary">
-                  {position}
-                </CardDescription>
-              </CardHeader>
-
-              <CardFooter>
-                {socialNetwork.map(({ name, url }: SocialNetworkProps) => (
-                  <div key={name}>
-                    <a
-                      rel="noreferrer noopener"
-                      href={url}
-                      target="_blank"
-                      className={buttonVariants({
-                        variant: "ghost",
-                        size: "sm",
-                      })}
-                    >
-                      <span className="sr-only">{name} icon</span>
-                      {socialIcon(name)}
-                    </a>
+          {data.map(
+            ({ imageUrl, name, position, socialNetwork }: DataProps) => (
+              <Card
+                key={name}
+                className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center">
+                <CardHeader className="mt-8 flex justify-center items-center pb-2">
+                  <div className="absolute -top-12 rounded-full w-24 h-24 aspect-square">
+                    <Image
+                      src={imageUrl}
+                      alt={`${name} ${position}`}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
                   </div>
-                ))}
-              </CardFooter>
-            </Card>
-          )
-        )}
-      </div>
+                  <CardTitle className="text-center">{name}</CardTitle>
+                  <CardDescription className="text-primary">
+                    {position}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  {socialNetwork.map(({ name, url }: SocialNetworkProps) => (
+                    <div key={name}>
+                      <a
+                        rel="noreferrer noopener"
+                        href={url}
+                        target="_blank"
+                        className={buttonVariants({
+                          variant: "ghost",
+                          size: "sm",
+                        })}>
+                        <span className="sr-only">{name} icon</span>
+                        {socialIcon(name)}
+                      </a>
+                    </div>
+                  ))}
+                </CardFooter>
+              </Card>
+            )
+          )}
+        </div>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Statistics: React.FC = () => {
+const Questions: React.FC = () => {
     return (
         <div className="bg-[#799f90] py-8 text-white text-center">
             <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 py-[40px]">
@@ -18,4 +18,4 @@ const Statistics: React.FC = () => {
     );
 };
 
-export default Statistics;
+export default Questions;

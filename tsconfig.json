@@ -15,7 +15,8 @@
     "types": ["node", "react", "react-dom", "next"],
     "paths": {
       "@src/*": ["./src/*"]
-    }
+    },
+    
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
