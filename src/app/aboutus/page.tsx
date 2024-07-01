@@ -1,21 +1,21 @@
 import { Inter } from "next/font/google";
 import { Navbar } from "@src/components/Navbar/Navbar";
+import Image from "next/legacy/image";
 import { Footer } from "@src/components/Footer/Footer";
-import contactus from '@src/images/contactus.jpg';
+import aboutus from '@public/aboutus.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
-
-export default function ContactUs() {
+export default function AboutUs() {
     return (
         <>
             <main>
                 <div className="relative ">
                     <Navbar />
                     <div className="relative h-screen 6 w-full ">
-                        <div
-                            className="absolute inset-0 z-1 bg-cover bg-center"
-                            style={{ backgroundImage: `url(${contactus.src})` }} // Using the src property of the imported image
-                        ></div>
+                        <Image
+                            src={aboutus.src}
+                            layout="fill"
+                            objectFit="cover" />
                     </div>
                     <Footer />
                 </div>
@@ -23,4 +23,3 @@ export default function ContactUs() {
         </>
     );
 }
-{/* grid grid-cols-1 lg:grid-cols-2  */ }

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import working from "@src/images/working.jpg";
+import working from "@public/working.jpg";
 
 const AboutUs = () => {
     return (

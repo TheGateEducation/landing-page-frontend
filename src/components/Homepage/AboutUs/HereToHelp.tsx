@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import woman from "@src/images/woman.jpg";
+import woman from "@public/woman.jpg";
 
 const HereToHelp = () => {
     return (

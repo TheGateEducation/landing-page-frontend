@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { useRouter } from 'next/router'
 import Link from "next/link";
@@ -20,7 +22,6 @@ import NavbarIcon from "@src/components/Navbar/icons/NavbarIcon.component";
 import { buttonVariants } from "@src/components/Navbar/components/button";
 import { ModeToggle } from "@src/components/Navbar/components/mode-toggle";
 import Logo from "@src/components/Navbar/components/Logo";
-
 interface RouteProps {
     href: string;
     label: string;
@@ -49,8 +50,10 @@ const routeList: RouteProps[] = [
     }
 ];
 
+
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
     return (
         <header className="sticky fixed border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-300 dark:bg-background">
             <NavigationMenu className="mx-auto">
