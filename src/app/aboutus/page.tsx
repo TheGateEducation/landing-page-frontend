@@ -15,7 +15,8 @@ export default function AboutUs() {
                         <Image
                             src={aboutus.src}
                             layout="fill"
-                            objectFit="cover" />
+                            objectFit="cover" 
+                            alt= "sobre nosotros"/>
                     </div>
                     <Footer />
                 </div>

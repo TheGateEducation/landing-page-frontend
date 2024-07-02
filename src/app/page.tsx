@@ -46,8 +46,6 @@ export default function Page() {
             <MeetTeam />
             <Questions />
             <Carousel />
-            <Footer />
-            
         </main>
     </>
 );
