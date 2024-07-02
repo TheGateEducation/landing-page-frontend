@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
-import { Navbar } from "@src/components/Navbar/Navbar";
-import Image from "next/legacy/image";
-import { Footer } from "@src/components/Footer/Footer";
+import Hero from '@src/components/Hero/Hero';
+import Content from '@src/components/AboutUs/Content/Content';
 import aboutus from '@public/aboutus.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,17 +8,8 @@ export default function AboutUs() {
     return (
         <>
             <main>
-                <div className="relative ">
-                    <Navbar />
-                    <div className="relative h-screen 6 w-full ">
-                        <Image
-                            src={aboutus.src}
-                            layout="fill"
-                            objectFit="cover" 
-                            alt= "sobre nosotros"/>
-                    </div>
-                    <Footer />
-                </div>
+                <Hero url={aboutus} title="Sobre nosotros"/>
+                <Content />
             </main>
         </>
     );

@@ -18,7 +18,7 @@ const HereToHelp = () => {
                 </div>
                 <div className="md:w-1/2 ">
                     <Image
-                        className="rounded-lg shadow-lg w-full h-full object-cover"
+                        className="rounded-3xl shadow-lg w-full h-full object-cover"
                         src={woman}
                         alt="working" />
                 </div>

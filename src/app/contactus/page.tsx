@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google";
-import { Navbar } from "@src/components/Navbar/Navbar";
-
-import { Footer } from "@src/components/Footer/Footer";
-import contactus from '@public/contactus.jpg';
+import contactus from '@public/contactus.png';
+import Hero from '@src/components/Hero/Hero';
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -10,16 +8,8 @@ export default function ContactUs() {
     return (
         <>
             <main>
-                <div className="relative ">
-                    <Navbar />
-                    <div className="relative h-screen 6 w-full ">
-                        <div
-                            className="absolute inset-0 z-1 bg-cover bg-center"
-                            style={{ backgroundImage: `url(${contactus.src})` }} // Using the src property of the imported image
-                        ></div>
-                    </div>
-                    <Footer />
-                </div>
+                    <Hero url={contactus} title="Contactanos" subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti."/>
+                    
             </main>
         </>
     );

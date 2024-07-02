@@ -9,7 +9,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row items-center justify-center px-14 md:px-6 lg:px-12 xl:px-40">
                 <div className="md:w-1/2 ">
                     <Image 
-                        className="rounded-lg shadow-lg w-full h-full object-cover"
+                        className="rounded-3xl shadow-lg w-full h-full object-cover"
                         src={working} 
                         alt="working" />
                 </div>

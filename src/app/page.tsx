@@ -1,6 +1,5 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import { Footer } from '@src/components/Footer/Footer';
  
 import Hero from '@src/components/Homepage/Hero/Hero';
 import AboutUs from '@src/components/Homepage/AboutUs/AboutUs';
