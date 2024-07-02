@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Questions: React.FC = () => {
     return (
@@ -9,9 +10,11 @@ const Questions: React.FC = () => {
                         ¿Tienes preguntas?
                     </h1>
                 </div>
+                <Link href="/contactus">
                 <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover">
                     Nosotros respuestas
                 </button>
+                </Link>
             </div>
         </div>
 

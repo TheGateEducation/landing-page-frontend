@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import contactus from '@public/contactus.png';
+import Form from '@src/components/ContactUs/Form';
 import Hero from '@src/components/Hero/Hero';
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,7 +10,7 @@ export default function ContactUs() {
         <>
             <main>
                     <Hero url={contactus} title="Contactanos" subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti."/>
-                    
+                    <Form />
             </main>
         </>
     );
