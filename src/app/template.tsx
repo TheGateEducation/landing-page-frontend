@@ -7,7 +7,7 @@ import { Footer } from '@src/components/Footer/Footer'
 
 export default function template({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <>
       <Head>
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,8 +18,11 @@ export default function template({ children }: { children: React.ReactNode }) {
       </div>
       <body>
         {children}
+        <footer>
+        <Footer />
+      </footer>
       </body>
-      <Footer />
-    </html>
+      
+    </>
   )
 }
