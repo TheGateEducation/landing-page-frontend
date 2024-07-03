@@ -116,7 +116,7 @@ export const Navbar = () => {
                                 key={i}
                                 className={`text-[17px] ${buttonVariants({
                                     variant: "ghost",
-                                })}`}
+                                })} hover:text-customPurple hover:underline`}
                             >
                                 {route.label}
                             </Link>

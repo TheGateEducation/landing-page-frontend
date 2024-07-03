@@ -5,6 +5,7 @@ import { Linkedin } from "lucide-react";
 import Image from "next/legacy/image";
 import paulina from "@public/paulina.jpeg";
 import alejandra from "@public/alejandra.jpeg";
+import gonzalo from "@public/gonzalo.jpeg";
 import { StaticImageData } from "next/legacy/image";
 interface SocialNetworkProps {
   name: string,
@@ -43,16 +44,14 @@ const data: DataProps[] = [
   {
     name: "Gonzalo Perez Piaggio",
     position: "Student Counselor",
-    imageUrl: alejandra,
+    imageUrl: gonzalo,
     socialNetwork: [
       {
         name: "Linkedin",
         url: "https://www.linkedin.com/in/gonzalo-perez-piaggio-b023591/"
       }
     ]
-
   }
-
 ];
 
 const MeetTeam = () => {

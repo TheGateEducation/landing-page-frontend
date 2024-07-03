@@ -44,7 +44,6 @@ export default function Page() {
             <HeretoHelp />
             <MeetTeam />
             <Questions />
-            <Carousel />
         </main>
     </>
 );

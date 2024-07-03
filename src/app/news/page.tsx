@@ -8,7 +8,10 @@ export default function Programs() {
     return (
         <>
             <main>
-                    <Hero url={news} title="Programas" />
+                <Hero
+                    url={news}
+                    title="Noticias" 
+                />
             </main>
         </>
 

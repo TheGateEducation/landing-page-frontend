@@ -4,6 +4,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Navbar } from '@src/components/Navbar/Navbar'
 import { Footer } from '@src/components/Footer/Footer'
+import { Carousel } from '@src/components/Footer/Carousel';
 
 export default function template({ children }: { children: React.ReactNode }) {
   return (
@@ -19,6 +20,7 @@ export default function template({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <footer>
+        <Carousel />
         <Footer />
       </footer>
       </body>

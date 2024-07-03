@@ -9,8 +9,11 @@ export default function ContactUs() {
     return (
         <>
             <main>
-                    <Hero url={contactus} title="Contactanos" subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti."/>
-                    <Form />
+                <Hero 
+                    url={contactus} 
+                    title="Contáctanos" 
+                    subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti."/>
+                <Form />
             </main>
         </>
     );
