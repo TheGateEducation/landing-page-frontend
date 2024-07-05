@@ -54,15 +54,15 @@ const Gallery = () => {
     return (
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 p-20">
             {galleryData.map(({ imageLink, title }, index) => (
-                <div key={index} className="relative">
-                    <button >
+                <div key={index} className="relative w-full h-full">
+                    <button className="w-full h-full">
                         <Image
                             className="rounded-2xl object-cover object-center"
                             src={imageLink}
                             alt="gallery-photo"
                         />
                         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-0 rounded-2xl transition-opacity">
-                            <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold text-white hover:text">{title}</h1>
+                            <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold text-white">{title}</h1>
                         </div>
                     </button >
                 </div>

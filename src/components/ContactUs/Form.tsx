@@ -75,9 +75,11 @@ const Form = () => {
                                 focus:ring-1 focus:ring-customPurple"
                             >
                                 <option value="">Selecciona tu programa de interés</option>
-                                <option value="ingenieria">Ingeniería</option>
-                                <option value="arquitectura">Arquitectura</option>
-                                <option value="medicina">Medicina</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                                <option value="High School">High School</option>
+                                <option value="Master">Master</option>
+                                <option value="Master">Master</option>
+                                <option value="Junior High School">Junior High School</option>
                             </select>
                         </label>
                         <div className="pt-4">

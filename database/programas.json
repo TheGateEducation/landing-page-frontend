@@ -1,0 +1,41 @@
+[
+    {
+        "id_record": "1",
+        "id_country": "1",
+        "id_program": "1",
+        "recod_name": "Verano en viena",
+        "duration": "1 months",
+        "description": "This is a description of the program",
+        "requirements": "1. Be a student\n2. Have passport\n3. Covid vaccine",
+        "start_date": "2020-01-01",
+        "end_date": "2020-01-31",
+        "aplication_period": "2019-12-01",
+        "offering_institution": "University of the World"
+    },
+    {
+        "id_record": "2",
+        "id_country": "1",
+        "id_program": "2",
+        "recod_name": "Program 2",
+        "duration": "6 months",
+        "description": "This is a description of the program",
+        "requirements": "1. Be a student\n2. Be a student\n3. Be a student",
+        "start_date": "2020-01-01",
+        "end_date": "2020-06-30",
+        "aplication_period": "2019-12-01",
+        "offering_institution": "University of New York"
+    },
+    {
+        "id_record": "3",
+        "id_country": "1",
+        "id_program": "3",
+        "recod_name": "Program 3",
+        "duration": "12 months",
+        "description": "This is a description of the program",
+        "requirements": "1. Be a student\n2. Be a student\n3. Be a student",
+        "start_date": "2020-01-01",
+        "end_date": "2020-12-31",
+        "aplication_period": "2019-12-01",
+        "offering_institution": "University of California"
+    }
+]
