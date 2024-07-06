@@ -28,7 +28,10 @@
       ],
       "@public/*": [
         "./public/*"
-      ]
+      ],
+      "@app/*": [
+        "./app/*"
+      ],
     },
     "plugins": [
       {
@@ -43,6 +46,5 @@
   ],
   "exclude": [
     "node_modules",
-    "src/app/_app.tsx",
   ]
 }

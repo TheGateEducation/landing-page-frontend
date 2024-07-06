@@ -5,7 +5,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@src/components/Navbar/components/dropdown-menu";
-import { useTheme } from "@src/theme/theme-provider";
+import { useTheme } from "@app/theme/theme-provider";
 import { Moon, Sun } from "lucide-react";
 
 export function ModeToggle() {
