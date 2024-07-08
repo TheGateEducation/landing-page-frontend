@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Hero from '@src/components/Hero/Hero';
-import news from '@public/news.jpg';
+import news from '@public/home/news.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
 

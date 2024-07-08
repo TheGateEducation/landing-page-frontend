@@ -61,7 +61,7 @@ const Gallery = () => {
                             src={imageLink}
                             alt="gallery-photo"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-0 rounded-2xl transition-opacity">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-0 rounded-2xl transition-opacity">
                             <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold text-white">{title}</h1>
                         </div>
                     </button >

@@ -1,10 +1,10 @@
 // import SecondaryText from "@src/components/Text/SecondaryText.component";
 import React from "react";
 import Image from "next/image";
-import telecommuting from "@public//telecommuting.png";
-import options from "@public/options.png";
-import flags from "@public/flags.png";
-import fly from "@public/fly.png";
+import telecommuting from "@public/home/telecommuting.png";
+import options from "@public/home/options.png";
+import flags from "@public/home/flags.png";
+import fly from "@public/home/fly.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ImageData {

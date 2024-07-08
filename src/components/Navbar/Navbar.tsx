@@ -28,7 +28,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
     {
-        href: "/aboutus",
+        href: "/about",
         label: "Sobre nosotros",
     },
     {
@@ -44,7 +44,7 @@ const routeList: RouteProps[] = [
         label: "Noticias",
     },
     {
-        href: "/contactus",
+        href: "/contact",
         label: "Contacto",
     }
 ];

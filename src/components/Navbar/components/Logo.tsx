@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '@public/brand.png';
+import logo from '@public/home/brand.png';
 import Image from 'next/image';
 
 const Logo: React.FC = ({}) => {

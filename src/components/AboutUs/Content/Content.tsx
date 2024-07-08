@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import group from "@public/groupwoman.jpg";
+import group from "@public/home/groupwoman.jpg";
 
 const Content = () => {
     return (

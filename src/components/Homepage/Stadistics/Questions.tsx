@@ -10,7 +10,7 @@ const Questions: React.FC = () => {
                         ¿Tienes preguntas?
                     </h1>
                 </div>
-                <Link href="/contactus">
+                <Link href="/contact">
                 <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover">
                     Nosotros respuestas
                 </button>

@@ -3,9 +3,9 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@src/c
 import { buttonVariants } from "@src/components/Homepage/MeetTeam/ButtonVariants";
 import { Linkedin } from "lucide-react";
 import Image from "next/legacy/image";
-import paulina from "@public/paulina.jpeg";
-import alejandra from "@public/alejandra.jpeg";
-import gonzalo from "@public/gonzalo.jpeg";
+import paulina from "@public/home/paulina.jpeg";
+import alejandra from "@public/home/alejandra.jpeg";
+import gonzalo from "@public/home/gonzalo.jpeg";
 import { StaticImageData } from "next/legacy/image";
 interface SocialNetworkProps {
   name: string,
