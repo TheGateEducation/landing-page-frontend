@@ -17,6 +17,7 @@ export default function Programs() {
         <main>
                <Hero url={programs} title="Programas"/>
                <Gallery />
+
         </main>
         </>
 
