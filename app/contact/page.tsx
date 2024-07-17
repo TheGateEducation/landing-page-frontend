@@ -14,15 +14,12 @@ export const metadata = {
 
 export default function ContactUs() {
     return (
-        <>
-            <main>
-                <Hero 
-                    url={contactus} 
-                    title="Contáctanos" 
-                    subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti."/>
-                <Form />
-            </main>
-        </>
+        <main>
+            <Hero
+                url={contactus}
+                title="Contáctanos"
+                subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti." />
+            {/* <Form /> */}
+        </main>
     );
 }
-{/* grid grid-cols-1 lg:grid-cols-2  */ }

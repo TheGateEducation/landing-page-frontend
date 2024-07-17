@@ -3,8 +3,6 @@ import Hero from '@src/components/Hero/Hero';
 import news from '@public/home/news.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export const metadata = {
     title: "Noticias - The Gate Education",
     description: "Entérate de las últimas noticias y eventos de tu proxima institución educativa en el extranjero y convenios que tenemos.",
@@ -12,14 +10,9 @@ export const metadata = {
 };
 export default function Programs() {
     return (
-        <>
-            <main>
-                <Hero
-                    url={news}
-                    title="Noticias" 
-                />
-            </main>
-        </>
-
+        <Hero
+            url={news}
+            title="Noticias"
+        />
     );
 }

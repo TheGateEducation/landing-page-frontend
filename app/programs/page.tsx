@@ -4,7 +4,6 @@ import Gallery from '@src/components/Programs/Gallery';
 import programs from '@public/home/programs.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata = {
     title: "Programas - The Gate Education",
     description: "Conoce la oferta que tenemos para ti en educación internacional. ",
@@ -14,11 +13,10 @@ export const metadata = {
 export default function Programs() {
     return (
         <>
-        <main>
-               <Hero url={programs} title="Programas"/>
-               <Gallery />
-
-        </main>
+            <main>
+                <Hero url={programs} title="Programas" />
+                <Gallery />
+            </main>
         </>
 
     );

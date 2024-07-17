@@ -1,6 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
- 
+
 import Hero from '@src/components/Homepage/Hero/Hero';
 import AboutUs from '@src/components/Homepage/About/About';
 import Stadistics from '@src/components/Homepage/Stadistics/Stadistics';
@@ -13,10 +13,8 @@ import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] });
 
-
 export default function Page() {
-  return (
-    <>
+    return (
         <main>
             <Hero />
             <AboutUs />
@@ -26,6 +24,5 @@ export default function Page() {
             <MeetTeam />
             <Questions />
         </main>
-    </>
-);
+    );
 }
