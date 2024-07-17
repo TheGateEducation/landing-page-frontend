@@ -12,11 +12,9 @@ export const metadata = {
 
 export default function AboutUs() {
     return (
-        <>
-            <main>
-                <Hero url={aboutus} title="Sobre nosotros"/>
-                <Content />
-            </main>
-        </>
+        <main>
+            <Hero url={aboutus} title="Sobre nosotros" />
+            <Content />
+        </main>
     );
 }

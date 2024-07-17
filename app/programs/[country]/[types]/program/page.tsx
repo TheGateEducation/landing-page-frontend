@@ -14,7 +14,7 @@ async function getPosts() {
         return [];
     }
 }
-interface PostProps{
+interface PostProps {
     body: string;
 }
 

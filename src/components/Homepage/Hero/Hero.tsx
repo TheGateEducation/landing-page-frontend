@@ -9,10 +9,10 @@ const Hero = () => {
                 <p className="text-lg md:text-xl lg:text-2xl mb-8">Haz realidad tu sueño de educación internacional</p>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <Link href="/contact">
-                    <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover">Contáctanos</button>
+                        <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover">Contáctanos</button>
                     </Link>
                     <Link href='/about'>
-                    <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-2 px-4 rounded-3xl hover:bg-customOrangeHover">Sobre Nosotros</button>
+                        <button style={{ fontSize: '20px' }} className="bg-customOrange text-white py-2 px-4 rounded-3xl hover:bg-customOrangeHover">Sobre Nosotros</button>
                     </Link>
                 </div>
             </div>
