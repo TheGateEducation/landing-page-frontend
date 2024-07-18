@@ -3,9 +3,6 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@src/c
 import { buttonVariants } from "@src/components/Homepage/MeetTeam/ButtonVariants";
 import { Linkedin } from "lucide-react";
 import Image from "next/legacy/image";
-import paulina from "@public/home/paulina.jpeg";
-import alejandra from "@public/home/alejandra.jpeg";
-import gonzalo from "@public/home/gonzalo.jpeg";
 import { StaticImageData } from "next/legacy/image";
 interface SocialNetworkProps {
   name: string,
@@ -14,7 +11,7 @@ interface SocialNetworkProps {
 interface DataProps {
   name: string,
   position: string,
-  imageUrl: StaticImageData;
+  imageUrl: string;
   socialNetwork: SocialNetworkProps[];
 }
 
@@ -22,7 +19,7 @@ const data: DataProps[] = [
   {
     name: "Paulina Valdés Rochín",
     position: "CEO",
-    imageUrl: paulina,
+    imageUrl: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/paulina.jpeg",
     socialNetwork: [
       {
         name: "Linkedin",
@@ -33,7 +30,7 @@ const data: DataProps[] = [
   {
     name: "Alejandra Hernández García",
     position: "Student Counselor",
-    imageUrl: alejandra,
+    imageUrl: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/alejandra.jpeg",
     socialNetwork: [
       {
         name: "Linkedin",
@@ -44,7 +41,7 @@ const data: DataProps[] = [
   {
     name: "Gonzalo Perez Piaggio",
     position: "Student Counselor",
-    imageUrl: gonzalo,
+    imageUrl: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/gonzalo.jpeg",
     socialNetwork: [
       {
         name: "Linkedin",

@@ -1,16 +1,12 @@
 // import SecondaryText from "@src/components/Text/SecondaryText.component";
 import React from "react";
 import Image from "next/image";
-import telecommuting from "@public/home/telecommuting.png";
-import options from "@public/home/options.png";
-import flags from "@public/home/flags.png";
-import fly from "@public/home/fly.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ImageData {
   h2: string;
   p: string;
-  src: StaticImport;
+  src: string;
   alt: string;
 }
 
@@ -18,25 +14,25 @@ const data: ImageData[] = [
   {
     h2: "01.",
     p: "Contactanos",
-    src: telecommuting,
+    src: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/telecommuting.png",
     alt: "telecommuting"
   },
   {
     h2: "02.",
     p: "Encuentra todas las opciones para tus estudios",
-    src: options,
+    src: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/options.png",
     alt: "options"
   },
   {
     h2: "03.",
     p: "Selecciona tu programa y aplica",
-    src: flags,
+    src: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/flags.png",
     alt: "flags"
   },
   {
     h2: "04.",
     p: "¡Viaja!",
-    src: fly,
+    src: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/fly.png",
     alt: "fly"
   }
 ];
@@ -61,6 +57,7 @@ export const Safeway: React.FC = () => {
                   src={src}
                   alt={alt}
                   width="80"
+                  height="80"
                 />
                 <h2 className="pt-3 text-2xl md:text-3xl font-bold text-customPurple">{h2}</h2>
                 <p className="text-textGray my-4 md:mt-6 md:mb-5">{p}</p>

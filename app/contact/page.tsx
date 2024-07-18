@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import contactus from '@public/home/contactus.png';
 import ContactUsForm from '@src/components/ContactUs/Form';
 import Hero from '@src/components/Hero/Hero';
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +15,7 @@ export default function ContactUs() {
     return (
         <main>
             <Hero
-                url={contactus}
+                url="https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/contactus.png"
                 title="Contáctanos"
                 subitle="¿Quieres ponerte en contacto? Nos encantaría saber de ti." />
             <ContactUsForm />

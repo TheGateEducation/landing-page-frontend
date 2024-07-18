@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import group from "@public/home/groupwoman.jpg";
 
 const Content = () => {
     return (
@@ -9,8 +8,11 @@ const Content = () => {
             <div className="md:w-1/2 ">
                 <Image
                     className="rounded-3xl shadow-lg w-full h-full object-cover"
-                    src={group}
-                    alt="working" />
+                    src="https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/groupwoman.jpg"
+                    alt="working" 
+                    width={700}
+                    height={500}
+                    />
             </div>
             <div className="md:w-1/2 mt-0 md:mt-0 md:ml-10 flex flex-col items-start justify-center text-justify md:text-left py-5 ">
                 <h2 className="text-2xl md:text-3xl font-bold text-customOrange">¿Quiénes somos?</h2>

@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import Hero from '@src/components/Hero/Hero';
-import services from '@public/home/services.jpg';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,7 +10,7 @@ export const metadata = {
 export default function Programs() {
     return (
         <main>
-            <Hero url={services} title="Servicios" />
+            <Hero url="https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/home/services.jpg" title="Servicios" />
         </main>
     );
 }
