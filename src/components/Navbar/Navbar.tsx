@@ -78,7 +78,6 @@ export const Navbar = () => {
                                     className="flex md:hidden h-5 w-5"
                                     onClick={() => setIsOpen(true)}
                                 >
-                                    {/* <span className="sr-only">Menu Icon</span> */}
                                 </Menu>
                             </SheetTrigger>
 
@@ -112,9 +111,12 @@ export const Navbar = () => {
                                 rel="noreferrer noopener"
                                 href={route.href}
                                 key={i}
-                                className={`text-[17px] ${buttonVariants({
-                                    variant: "ghost",
-                                })} hover:text-customPurple hover:underline`}
+                                className={`
+                                    text-[17px] 
+                                    ${buttonVariants({variant: "ghost"})} 
+                                    hover:text-customPurple hover:border-customPurple hover:bg-customPurple hover:bg-opacity-10
+
+                                `}
                             >
                                 {route.label}
                             </Link>
