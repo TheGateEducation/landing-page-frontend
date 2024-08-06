@@ -1,7 +1,39 @@
+"use client";
+
 import React from "react";
 import InputField from "./Label";
+import StudentsRecordsService from "@src/services/studentsRecords.service"
 
 const ContactUsForm = () => {
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+    const [country, setCountry] = React.useState("");
+    const [destinationCountry, setDestinationCountry] = React.useState("");
+    const [program, setProgram] = React.useState("");
+    const [howDidYouHearAboutUs, setHowDidYouHearAboutUs] = React.useState("");
+
+
+    const sendForm = async () => {
+        const studentsRecordsService = new StudentsRecordsService();
+        const data = {
+            name,
+            email,
+            phone,
+            country,
+            destinationCountry,
+            program,
+            howDidYouHearAboutUs,
+        };
+
+        try {
+            const response = await studentsRecordsService.createStudentRecord(data);
+            console.log(response);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center px-4 md:px-6 lg:px-12 xl:px-40 pt-10">
             <div className="mb-6 md:mb-0 flex items-center justify-center">
@@ -9,15 +41,20 @@ const ContactUsForm = () => {
             </div>
             <div className="w-full shadow-md rounded-lg p-10 pt-6 pb-8 mb-4 bg-gray-100">
 
-                <InputField type="text" placeholder="Escribe tu nombre completo">Nombre completo</InputField>
-                <InputField type="email" placeholder="Escribe tu correo electrónico">Email</InputField>
-                <InputField type="tel" placeholder="Escribe tu número de teléfono">Teléfono</InputField>
-
-
+                <InputField 
+                    onChange={(e) => setName(e.target.value)}
+                    type="text" placeholder="Escribe tu nombre completo">Nombre completo</InputField>
+                <InputField
+                    onChange={(e) => setEmail(e.target.value)} 
+                    type="email" placeholder="Escribe tu correo electrónico">Email</InputField>
+                <InputField 
+                    onChange={(e) => setPhone(e.target.value)}
+                    type="tel" placeholder="Escribe tu número de teléfono">Teléfono</InputField>
 
                 <label className="block mb-4">
                     <span className="block text-lg font-medium text-gray-700">País de origen</span>
                     <select
+                        onChange={(e) => setCountry(e.target.value)}
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
@@ -266,14 +303,13 @@ const ContactUsForm = () => {
                         <option value="YE">Yemen</option>
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabue</option>
-
                     </select>
-
                 </label>
 
                 <label className="block mb-4">
                     <span className="block text-lg font-medium text-gray-700">País de destino</span>
                     <select
+                        onChange={(e) => setDestinationCountry(e.target.value)}
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
@@ -522,14 +558,13 @@ const ContactUsForm = () => {
                         <option value="YE">Yemen</option>
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabue</option>
-
-
                     </select>
                 </label>
 
                 <label className="block mb-4">
                     <span className="block text-lg font-medium text-gray-700">Programa de interés</span>
                     <select
+                        onChange={(e) => setProgram(e.target.value)}
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
@@ -546,6 +581,7 @@ const ContactUsForm = () => {
                         ¿Cómo te enteraste de nosotros?
                     </span>
                     <select
+                        onChange={(e) => setHowDidYouHearAboutUs(e.target.value)}
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
@@ -561,6 +597,7 @@ const ContactUsForm = () => {
                 <div className="pt-4">
                     <button
                         type="submit"
+                        onClick={sendForm}
                         className="w-full bg-customOrange text-white py-2 px-4 rounded-3xl hover:bg-customOrangeHover transition-colors"
                     >
                         Enviar
