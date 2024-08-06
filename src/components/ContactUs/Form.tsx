@@ -12,9 +12,11 @@ const ContactUsForm = () => {
     const [destinationCountry, setDestinationCountry] = React.useState("");
     const [program, setProgram] = React.useState("");
     const [howDidYouHearAboutUs, setHowDidYouHearAboutUs] = React.useState("");
-
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [successMessage, setSuccessMessage] = React.useState("");
 
     const sendForm = async () => {
+        setIsSubmitting(true);
         const studentsRecordsService = new StudentsRecordsService();
         const data = {
             name,
@@ -28,9 +30,13 @@ const ContactUsForm = () => {
 
         try {
             const response = await studentsRecordsService.createStudentRecord(data);
-            console.log(response);
+            if (response.status === 200) {
+                setSuccessMessage("¡Un asesor se estará poniendo en contacto contigo pronto!");
+            }
         } catch (error) {
             console.error(error);
+        } finally {
+            setIsSubmitting(false);
         }
     }
 
@@ -40,6 +46,11 @@ const ContactUsForm = () => {
                 <h1 className="text-2xl md:text-4xl font-bold text-customPurple text-center">¡Aquí empieza tu viaje!</h1>
             </div>
             <div className="w-full shadow-md rounded-lg p-10 pt-6 pb-8 mb-4 bg-gray-100">
+                {successMessage && (
+                    <div className="mb-6 text-green-600 text-center">
+                        {successMessage}
+                    </div>
+                )}
 
                 <InputField 
                     onChange={(e) => setName(e.target.value)}
@@ -599,6 +610,7 @@ const ContactUsForm = () => {
                         type="submit"
                         onClick={sendForm}
                         className="w-full bg-customOrange text-white py-2 px-4 rounded-3xl hover:bg-customOrangeHover transition-colors"
+                        disabled={isSubmitting}
                     >
                         Enviar
                     </button>
