@@ -30,7 +30,7 @@ const ContactUsForm = () => {
 
         try {
             const response = await studentsRecordsService.createStudentRecord(data);
-            if (response.status === 200) {
+            if (response.status === 201 ) {
                 setSuccessMessage("¡Un asesor se estará poniendo en contacto contigo pronto!");
             }
         } catch (error) {
