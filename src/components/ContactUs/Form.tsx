@@ -26,6 +26,8 @@ const ContactUsForm = () => {
             destinationCountry,
             program,
             howDidYouHearAboutUs,
+            "createdAt": new Date().toISOString(),
+            "updatedAt": new Date().toISOString()
         };
 
         try {

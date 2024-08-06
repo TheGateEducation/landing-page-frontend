@@ -10,8 +10,6 @@ class StudentsRecordsService {
                 },
                 body: JSON.stringify({
                     "HTTP_METHOD": "POST",
-                    "created_at": new Date().toISOString(),
-                    "updated_at": new Date().toISOString(),
                     "student": data
                 })
             });
