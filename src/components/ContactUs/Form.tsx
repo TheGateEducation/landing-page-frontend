@@ -1,6 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 import InputField from "./Label";
 import StudentsRecordsService from "@src/services/studentsRecords.service"
 
@@ -12,13 +15,14 @@ const ContactUsForm = () => {
     const [destinationCountry, setDestinationCountry] = React.useState("");
     const [program, setProgram] = React.useState("");
     const [howDidYouHearAboutUs, setHowDidYouHearAboutUs] = React.useState("");
-    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [isSubmitted, setIsSubmitted] = React.useState(false);
     const [successMessage, setSuccessMessage] = React.useState("");
 
     const sendForm = async () => {
-        setIsSubmitting(true);
         const studentsRecordsService = new StudentsRecordsService();
         const data = {
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
             name,
             email,
             phone,
@@ -26,41 +30,63 @@ const ContactUsForm = () => {
             destinationCountry,
             program,
             howDidYouHearAboutUs,
-            "createdAt": new Date().toISOString(),
-            "updatedAt": new Date().toISOString()
+            counsellor: "",
+            areaOfInterest: "",
+            firstContact: "",
+            levelOfEducation: "",
+            levelOfInterest: "",
+            institution: "",
+            intake: "",
+            information: "",
+            documents: "",
+            application: "",
+            offerLetter: "",
+            scholarship: "",
+            acceptance: "",
+            payment: "",
+            coe: "",
+            visa: "",
+            invoice: "",
+            status: "",
+            visaResolutionTime: "",
+            notes: "",
+            currency: "",
+            totalTuition: "",
+            yearlyTuition: "",
+            commission: "",
+            tge: "",
+            salesPax: "",
         };
 
         try {
             const response = await studentsRecordsService.createStudentRecord(data);
-            if (response.status === 201 ) {
-                setSuccessMessage("¡Un asesor se estará poniendo en contacto contigo pronto!");
-            }
+            toast.success("Registro exitoso. ¡Gracias por contactarnos!. Nos pondremos en contacto contigo pronto.");
+            setIsSubmitted(true);
         } catch (error) {
             console.error(error);
-        } finally {
-            setIsSubmitting(false);
+            toast.error("Hubo un error al enviar el formulario.");
         }
     }
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center px-4 md:px-6 lg:px-12 xl:px-40 pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 items-center justify-center px-4 md:px-6 lg:px-12 xl:px-40 pt-10">
             <div className="mb-6 md:mb-0 flex items-center justify-center">
                 <h1 className="text-2xl md:text-4xl font-bold text-customPurple text-center">¡Aquí empieza tu viaje!</h1>
             </div>
-            <div className="w-full shadow-md rounded-lg p-10 pt-6 pb-8 mb-4 bg-gray-100">
+            <div className="w-full shadow-md rounded-lg p-10 pt-6 pb-8 mb-4 bg-gray-100 w-2/3 mx-auto mt-10">
                 {successMessage && (
                     <div className="mb-6 text-green-600 text-center">
                         {successMessage}
                     </div>
                 )}
 
-                <InputField 
+                <InputField
                     onChange={(e) => setName(e.target.value)}
                     type="text" placeholder="Escribe tu nombre completo">Nombre completo</InputField>
                 <InputField
-                    onChange={(e) => setEmail(e.target.value)} 
+                    onChange={(e) => setEmail(e.target.value)}
                     type="email" placeholder="Escribe tu correo electrónico">Email</InputField>
-                <InputField 
+                <InputField
                     onChange={(e) => setPhone(e.target.value)}
                     type="tel" placeholder="Escribe tu número de teléfono">Teléfono</InputField>
 
@@ -71,6 +97,7 @@ const ContactUsForm = () => {
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
+                        <option value="">Selecciona tu país de origen</option>
                         <option value="">Selecciona tu país de origen</option>
                         <option value="AF">Afganistán</option>
                         <option value="AL">Albania</option>
@@ -326,6 +353,7 @@ const ContactUsForm = () => {
                         className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:border-purple-900 
                             focus:ring-2 focus:ring-customPurple"
                     >
+                        <option value="">Selecciona tu país de destino</option>
                         <option value="">Selecciona tu país de destino</option>
                         <option value="AF">Afganistán</option>
                         <option value="AL">Albania</option>
@@ -608,16 +636,26 @@ const ContactUsForm = () => {
                 </label>
 
                 <div className="pt-4">
-                    <button
-                        type="submit"
-                        onClick={sendForm}
-                        className="w-full bg-customOrange text-white py-2 px-4 rounded-3xl hover:bg-customOrangeHover transition-colors"
-                        disabled={isSubmitting}
-                    >
-                        Enviar
-                    </button>
+                    {!isSubmitted ? (
+                        <button
+                            type="submit"
+                            onClick={sendForm}
+                            className="w-full bg-orange-400 text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover transition-colors"
+                            disabled={isSubmitted}
+                        >
+                            Enviar
+                        </button>
+                    ) :
+                        (
+                            <p className="w-full cursor-pointer text-center bg-orange-400 text-white py-3 px-4 rounded-3xl hover:bg-customOrangeHover transition-colors"
+                            >
+                                Registro completado. ¡Gracias por contactarnos!
+                            </p>
+                        )
+                    }
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 }

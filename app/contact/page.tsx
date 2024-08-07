@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import ContactUsForm from '@src/components/ContactUs/Form';
 import Hero from '@src/components/Hero/Hero';
+
 const inter = Inter({ subsets: ["latin"] });
 
 
