@@ -7,6 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import InputField from "./Label";
 import StudentsRecordsService from "@src/services/studentsRecords.service"
 
+import { v4 as uuidv4 } from 'uuid';
+
 const ContactUsForm = () => {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
@@ -21,6 +23,7 @@ const ContactUsForm = () => {
     const sendForm = async () => {
         const studentsRecordsService = new StudentsRecordsService();
         const data = {
+            id: uuidv4(),
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
             name,
