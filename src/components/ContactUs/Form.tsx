@@ -23,7 +23,6 @@ const ContactUsForm = () => {
     const sendForm = async () => {
         const studentsRecordsService = new StudentsRecordsService();
         const data = {
-            id: uuidv4(),
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
             name,
