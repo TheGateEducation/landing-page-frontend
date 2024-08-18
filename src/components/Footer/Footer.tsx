@@ -68,7 +68,7 @@ export const Footer = () => {
                     <div>
                         <Link
                             rel="noreferrer noopener"
-                            href="#"
+                            href="/programs"
                             className="opacity-60 hover:opacity-100"
                         >
                             Programas
@@ -77,7 +77,7 @@ export const Footer = () => {
                     <div>
                         <Link
                             rel="noreferrer noopener"
-                            href="#"
+                            href="/services"
                             className="opacity-60 hover:opacity-100"
                         >
                             Servicios
@@ -86,7 +86,7 @@ export const Footer = () => {
                     <div>
                         <Link
                             rel="noreferrer noopener"
-                            href="#"
+                            href="/news"
                             className="opacity-60 hover:opacity-100"
                         >
                             Noticias
@@ -95,7 +95,7 @@ export const Footer = () => {
                     <div>
                         <Link
                             rel="noreferrer noopener"
-                            href="#"
+                            href="/contact"
                             className="opacity-60 hover:opacity-100"
                         >
                             Contacto

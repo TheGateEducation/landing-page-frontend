@@ -1,42 +1,52 @@
 import React from "react";
 import Image from "next/image";
 
+
 const galleryData = [
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/campamento.jpg",
-        title: "Campamentos"
+        title: "Campamentos",
+        href: "/camp"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/certificates.jpg",
-        title: "Certificados y diplomas"
+        title: "Certificados y diplomas",
+        href: "/diploma"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/idiomas.jpg",
-        title: "Cursos de idiomas"
+        title: "Cursos de idiomas",
+        href: "/language_course"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/intecambio.jpg",
-        title: "Intercambios"
+        title: "Intercambios",
+        href: "/exchange"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/maestria.jpg",
-        title: "Maestrías"
+        title: "Maestrías",
+        href: "/master"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/male.jpg",
-        title: "Tours de estudio"
+        title: "Tours de estudio",
+        href: "/tour"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/school.jpg",
-        title: "Estudios en el extranjero"
+        title: "Estudios en el extranjero",
+        href: "/study_abroad"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/secundaria.jpg",
-        title: "Secundaria"
+        title: "Secundaria",
+        href: "/highschool"
     },
     {
         imageLink: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/gallery/profesional.jpg",
-        title: "Educación y formación profesional"
+        title: "Educación y formación profesional",
+        href: "/education"
     },
 ];
 
@@ -47,6 +57,7 @@ const Gallery = () => {
             {galleryData.map(({ imageLink, title }, index) => (
                 <div key={index} className="relative w-full h-full">
                     <button className="w-full h-full">
+                        
                         <Image
                             className="rounded-2xl object-cover object-center"
                             src={imageLink}
