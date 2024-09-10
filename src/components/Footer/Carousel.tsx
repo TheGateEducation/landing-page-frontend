@@ -26,6 +26,7 @@ const logos = {
     srh: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/srh.png",
     stanley: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/stanley.png",
     tm: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/tm.png",
+    nw: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/preparate_gris+(1).jpg"
 };
 
 const Logos = Object.entries(logos);
