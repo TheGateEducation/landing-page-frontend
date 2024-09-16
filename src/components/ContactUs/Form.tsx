@@ -10,7 +10,7 @@ import StudentsRecordsService from "@src/services/studentsRecords.service"
 import { v4 as uuidv4 } from 'uuid';
 
 const ContactUsForm = () => {
-    const [name, setName] = React.useState("");
+    const [area, setarea] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [phone, setPhone] = React.useState("");
     const [country, setCountry] = React.useState("");
@@ -25,7 +25,7 @@ const ContactUsForm = () => {
         const data = {
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
-            name,
+            area,
             email,
             phone,
             country,
@@ -83,7 +83,7 @@ const ContactUsForm = () => {
                 )}
 
                 <InputField
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setarea(e.target.value)}
                     type="text" placeholder="Escribe tu nombre completo">Nombre completo</InputField>
                 <InputField
                     onChange={(e) => setEmail(e.target.value)}

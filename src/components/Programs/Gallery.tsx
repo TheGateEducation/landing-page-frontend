@@ -5,16 +5,14 @@ interface GalleryProps {
     galleryData: {
         imageLink: string;
         title: string;
-        href: string;
     }[];
 }
 
 const Gallery: React.FC<GalleryProps> = ({ galleryData }) => {
     return (
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 p-20">
-            {galleryData.map(({ imageLink, title, href }, index) => (
+            {galleryData.map(({ imageLink, title }, index) => (
                 <div key={index} className="relative w-full h-full">
-                    <CustomLink href={href} className="flex items-center ">
                         <button className="w-full h-full">
                             <Image
                                 className="rounded-2xl object-cover object-center"
@@ -27,7 +25,6 @@ const Gallery: React.FC<GalleryProps> = ({ galleryData }) => {
                                 <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold text-white">{title}</h1>
                             </div>
                         </button >
-                    </CustomLink>
                 </div>
             ))}
         </div>

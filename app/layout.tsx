@@ -3,7 +3,7 @@ import './globals.css'
 export const metadata = {
     title: 'The Gate Education',
     description: 'Haz realidad tu sueño de educación internacional con nosotros. Ofrecemos programas en más de 10 países y más de 100 instituciones educacionales.',
-    keywords: 'educación internacional, estudiar en el extranjero, programas educacionales, instituciones educacionales, suiza, canada, australia, becas, intercambio, campamento, viajes',
+    keywords: 'educación internacional, estudiar en el extranjero, programas educacionales, instituciones educacionales, suiza, canada, australia, becas, intercambio, campamento, viajes, anahuac, tec de monterrey, ibero, universidades alemania, universidades australia, universidades italia, nueva zelanda, curso de idiomas',
     openGraph: {
         title: 'Tu Plataforma de Educación Internacional',
         description: 'Haz realidad tu sueño de educación internacional con nosotros. Ofrecemos programas en más de 10 países y más de 100 instituciones educacionales.',
