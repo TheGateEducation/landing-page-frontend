@@ -12,7 +12,7 @@ const logos = {
     constructor: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/constructor.png",
     curtini: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/curtini.png",
     deakin: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/deakin.png",
-    dublin : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/EMA_paris.png",
+    dublin : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/deakin.png",
     ecole: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/EMA_paris.png",
     eduinter: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/eduinter.png",
     ep: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ep.png",
