@@ -19,7 +19,7 @@ const logos = {
     gbs_d: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/gbs.png",
     gbs_m: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/gbs_malta.png",
     holmes: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/holmes.png",
-    international : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png",
+    international : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/IH.jpeg",
     icms: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ICMS.png",
     james: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/james.png",
     insight: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/INSIGHT.gif",
