@@ -20,9 +20,9 @@ const logos = {
     gbs_m: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/gbs_malta.png",
     holmes: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/holmes.png",
     international : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png",
-    icms: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/SARINA.png",
+    icms: "hhttps://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ICMS.png",
     james: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/james.png",
-    insight: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png",
+    insight: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/INSIGHT.gif",
     lakehead: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/lakehead.jpg",
     latrobe: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/latrobe.png",
     macquarie: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/macquarie.png",
@@ -32,13 +32,13 @@ const logos = {
     rmit: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/rmit.png",
     sarina: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/SARINA.png",
     schiller: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/schiller.png",
-    sol : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png",
+    sol : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/sol.png",
     souther: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/souther.png",
     srh: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/srh.png",
     stanley: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/stanley.png",
     tm: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/tm.png",
     nw: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/preparate_gris+(1).jpg",
-    wester: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png"
+    wester: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/westeraustr.jpg"
 };
 
 const Logos = Object.entries(logos);
