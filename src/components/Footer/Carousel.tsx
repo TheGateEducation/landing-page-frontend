@@ -12,7 +12,7 @@ const logos = {
     constructor: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/constructor.png",
     curtini: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/curtini.png",
     deakin: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/deakin.png",
-    dublin : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/deakin.png",
+    dublin : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/difc.png",
     ecole: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/EMA_paris.png",
     eduinter: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/eduinter.png",
     ep: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ep.png",
@@ -20,7 +20,7 @@ const logos = {
     gbs_m: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/gbs_malta.png",
     holmes: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/holmes.png",
     international : "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/asutralian.png",
-    icms: "hhttps://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ICMS.png",
+    icms: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/ICMS.png",
     james: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/james.png",
     insight: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/INSIGHT.gif",
     lakehead: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/lakehead.jpg",
@@ -38,7 +38,7 @@ const logos = {
     stanley: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/stanley.png",
     tm: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/tm.png",
     nw: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/preparate_gris+(1).jpg",
-    wester: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/westeraustr.jpg"
+    wester: "https://images-bucket-landing-page.s3.us-east-2.amazonaws.com/public/logo/WESTERNASUTR.jpg"
 };
 
 const Logos = Object.entries(logos);
