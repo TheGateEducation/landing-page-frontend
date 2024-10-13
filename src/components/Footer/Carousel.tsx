@@ -57,8 +57,8 @@ export const Carousel = () => {
                                             <Image
                                                 src={logo}
                                                 alt={name}
-                                                width={150}
-                                                height={100}
+                                                width={170}
+                                                height={140}
                                             />
                                         </li>
                                     ))}

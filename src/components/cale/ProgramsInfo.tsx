@@ -14,7 +14,7 @@ const ProgramInfo: React.FC<ProgramInfoProps> = ({ filteredPrograms, resetFilter
       {filteredPrograms.length === 0 ? (
         <p>No programs match the selected filters.</p>
       ) : (
-        <div className="results-container grid grid-cols-1 gap-6">
+        <div className="results-container grid grid-cols-1 gap-6 px-20">
           {filteredPrograms.map((program) => (
             <div key={program.id} className="program-item p-4 border rounded-md shadow-lg bg-white">
               <h2 className="text-xl font-bold mb-2">{program.name}</h2>
