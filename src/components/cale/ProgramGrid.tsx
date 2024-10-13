@@ -1,8 +1,9 @@
 "use client"
 import React, { useState } from "react";
+import ProgramInfo from "@src/components/cale/ProgramsInfo";
 //truly this can be done better, but I'm not sure how to do it
 
-interface ProgramsProps {
+export interface ProgramsProps {
   programsData: {
     id: number;
     area: string;
@@ -32,7 +33,17 @@ const ProgramFilter: React.FC<ProgramsProps> = ({ programsData }) => {
   const [selectedSpecialization, setSelectedSpecialization] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedInstitution, setSelectedInstitution] = useState("");
+  const [filteredPrograms, setFilteredPrograms] = useState(programsData); // replace with actual programs data
+  const [filters, setFilters] = useState({
+    country: "",
+    institution: "",
+    specialization: "",
+    // other filters
+  });
+  
+  
 
+  { /* Function to group programs by area(9) */ }
   const groupProgramsByarea = (programs: ProgramsProps['programsData']) => {
     const grouped: Record<string, ProgramsProps['programsData']> = {};
 
@@ -48,30 +59,24 @@ const ProgramFilter: React.FC<ProgramsProps> = ({ programsData }) => {
 
   const groupedPrograms = groupProgramsByarea(programsData);
 
-  const filteredPrograms = Object.values(groupedPrograms).flat().filter(program =>
-    (!selectedProgram || program.area === selectedProgram) &&
-    (!selectedSpecialization || program.specialization === selectedSpecialization) &&
-    (!selectedCountry || program.country === selectedCountry) &&
-    (!selectedInstitution || program.institution === selectedInstitution)
-  );
+  
 
-  // Obtener especializaciones basadas en argumentos seleccionados
+  { /* Obtener especializaciones basadas en argumentos */ }
   const specializations = Array.from(new Set(filteredPrograms.map(program => program.specialization)));
-
-  // Obtener países basados en el programa y especialización seleccionados
   const countries = Array.from(new Set(filteredPrograms.map(program => program.country)));
-
-  // Obtener instituciones basadas en el programa, especialización y país seleccionados
   const institutions = Array.from(new Set(filteredPrograms.map(program => program.institution)));
+  
+  
 
-  //function to reset filters and do a new research
   const resetFilters = () => {
-    setSelectedProgram("");
-    setSelectedSpecialization("");
-    setSelectedCountry("");
-    setSelectedInstitution("");
+    setFilters({
+      country: "",
+      institution: "",
+      specialization: "",
+      // reset other filters
+    });
+    setFilteredPrograms(programsData); // reset to the full list of programs
   };
-
   return (
     <>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 p-20">
@@ -173,36 +178,9 @@ const ProgramFilter: React.FC<ProgramsProps> = ({ programsData }) => {
       </div>
       {/* + Info or not data found message */}
       {selectedProgram && selectedSpecialization && selectedCountry && selectedInstitution && (
-        <>
-          {filteredPrograms.length === 0 ? (
-            <p>No programs match the selected filters.</p>
-          ) : (
-            <div className="results-container grid grid-cols-1 gap-6">
-              {filteredPrograms.map((program) => (
-                <div key={program.id} className="program-item p-4 border rounded-md shadow-lg bg-white">
-                  <h2 className="text-xl font-bold mb-2">{program.name}</h2>
-                  <p><strong>País:</strong> {program.country}</p>
-                  <p><strong>Institución:</strong> {program.institution}</p>
-                  <p><strong>Majors/Especialización:</strong> {program.specialization || "N/A"}</p>
-                  <p><strong>Ubicación:</strong> {program.location}</p>
-                  <p><strong>Fechas de inicio:</strong> {program.startDates || "N/A"}</p>
-                  <p><strong>Duración:</strong> {program.duration}</p>
-                  <p><strong>Costo por Año (USD):</strong> {program.costPerYearUSD || "N/A"}</p>
-                  <p><strong>Moneda:</strong> {program.currency || "N/A"}</p>
-                  <p><strong>Becas:</strong> {program.scholarships ? "Sí" : "No"}</p>
-                  <p><strong>Link:</strong> {program.link ? <a href={program.link} target="_blank" rel="noopener noreferrer">Ver programa</a> : "N/A"}</p>
-                  <p><strong>Notas:</strong> {program.notes || "N/A"}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </>
+        <ProgramInfo filteredPrograms={filteredPrograms} resetFilters={resetFilters} />
       )}
-      {/* reset filters */}
-      <button onClick={resetFilters} className="reset-button">
-        Reset Filters
-      </button>
-
+      
       <style jsx>{`
         .grid-item {
           background-color: #f9f9f9;
@@ -276,5 +254,4 @@ const ProgramFilter: React.FC<ProgramsProps> = ({ programsData }) => {
     </>
   );
 };
-
 export default ProgramFilter;

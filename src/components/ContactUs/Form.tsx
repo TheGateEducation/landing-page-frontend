@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import InputField from "./Label";
 import StudentsRecordsService from "@src/services/studentsRecords.service"
 
-import { v4 as uuidv4 } from 'uuid';
 
 const ContactUsForm = () => {
     const [area, setarea] = React.useState("");
